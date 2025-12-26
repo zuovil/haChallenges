@@ -5,4 +5,5 @@
 * <strong>Reading QR</strong>
 * <strong>Help me unpack</strong>
 * <strong>Backup restore</strong>
+* <strong>Mini miner</strong>
 
