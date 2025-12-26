@@ -1,2 +1,8 @@
 # haChallenges
-My solutions to hackattic challenges by using java
+### My solutions to hackattic challenges by using java  
+### Completed challenges： 
+
+* <strong>Reading QR</strong>
+* <strong>Help me unpack</strong>
+* <strong>Backup restore</strong>
+
