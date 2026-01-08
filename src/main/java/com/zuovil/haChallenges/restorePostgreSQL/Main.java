@@ -3,6 +3,8 @@ package com.zuovil.haChallenges.restorePostgreSQL;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.zuovil.haChallenges.common.Command;
+import com.zuovil.haChallenges.common.DealProcessStream;
 import org.apache.hc.client5.http.classic.methods.HttpGet;
 import org.apache.hc.client5.http.classic.methods.HttpPost;
 import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
@@ -122,8 +124,8 @@ public class Main {
     }
 
     private static Map<String, List<String>> runCommand(String commandString) throws Exception {
-        Command command = Command.fromInput(commandString);
-        String commandName = command.getCommandName();
+        Command command     = Command.fromInput(commandString);
+        String  commandName = command.getCommandName();
         List<String> params = command.getArgs();
         List<String> commands = new ArrayList<>();
         String osName = System.getProperty("os.name").toLowerCase();
@@ -139,8 +141,8 @@ public class Main {
         String trueCommand = String.join(" ", params);
         commands.add(trueCommand);
         // cmd -c 允许用户在命令行中直接运行一段字符串形式的 Shell 脚本或命令
-        Process process = new ProcessBuilder(commands).start();
-        DealProcessStream out = new DealProcessStream(process.getInputStream());
+        Process           process = new ProcessBuilder(commands).start();
+        DealProcessStream out     = new DealProcessStream(process.getInputStream());
         out.start();
         out.join();
         DealProcessStream err = new DealProcessStream(process.getErrorStream());

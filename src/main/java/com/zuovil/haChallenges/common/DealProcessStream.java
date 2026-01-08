@@ -1,4 +1,4 @@
-package com.zuovil.haChallenges.restorePostgreSQL;
+package com.zuovil.haChallenges.common;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -40,7 +40,7 @@ public class DealProcessStream extends Thread {
 
     }
 
-    List<String> getOut() {
+    public List<String> getOut() {
         return out;
     }
 

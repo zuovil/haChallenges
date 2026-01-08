@@ -7,3 +7,4 @@
 * <strong>Backup restore</strong>
 * <strong>Mini miner</strong>
 * <strong>Password hashing</strong>
+* <strong>Collision course</strong>
